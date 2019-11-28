@@ -1,0 +1,9 @@
+<% include ./partials/header %>
+<form action="/login" method="POST" class="form-signin">
+	<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <input type="text" name="username" placeholder="username" class="form-control" id="inputEmail" required autofocus>
+    <input type="password" name="password" placeholder="password" class="form-control" id="inputPassword" required>
+    <input type="submit" value="Login!" class="btn btn-lg btn-primary btn-block">
+</form>
+
+<% include ./partials/footer %>

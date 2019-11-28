@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> HarborBuddy</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/stylesheets/main.css">
+		<link rel="stylesheet" href="/stylesheets/signin.css">
+		
+	</head>
+	<body class="d-flex flex-column h-100">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">	
+			<a class="navbar-brand" href="/harbors">HarborBuddy</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav ml-auto">
+						<% if (!currentUser){%>
+						<a class="nav-item nav-link" href="/login">Login </a>
+						 <a class="nav-item nav-link" href="/register">Signup</a>
+						<% } else{ %>
+						<a class="nav-item nav-link" href="'#'">Logged in As : <%= currentUser.username%></a>
+						
+						<a class="nav-item nav-link" href="/logout">Logout</a>
+						<% } %>
+					</div>
+			</div>
+		</div>
+	</nav>
+		<div class= "container">
+			<% if(error && error.length>0){ %>
+			<div class="alert alert-danger" role="alert">
+			<%= error %> </div>
+			<% } %>
+				<% if(success && success.length>0){ %>
+			<div class="alert alert-success" role="alert">
+			<%= success %> </div>
+			<% } %>
+		</div>
+	

@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+<div class="container">
+	<header class="jumbotron">
+		<div class="container">
+			<h1>
+				Welcome to HarborBuddy
+			</h1>
+			<p>
+				View our handpicked Harbors from all over the world
+			</p>
+			<p>
+				<a class="btn btn-lg btn-outline-primary" href="/harbors/new"> Add new Harbor!</a>
+			</p>
+		</div>
+	</header>
+
+		<div class="row text-center">
+			<% harbors.forEach(function(geil) {%>
+			<div class="col-md-4 col-sm-6">
+				<div class="img-thumbnail">
+					<img src="<%= geil.image %>" class="img-fluid rounded mx-auto d-block" >
+					<div class="caption">
+						<h4>
+							<%= geil.name %>   <!-- harbors bezieht sich auf die variable in der function -->
+						</h4>
+					</div>
+					<p>
+						<a href="/harbors/<%= geil._id%>" class="btn btn-primary">More Info</a>
+					</p>
+				</div>
+			</div> 
+			<% });%>
+		</div>
+
+		
+</div>
+<% include ../partials/footer %>
