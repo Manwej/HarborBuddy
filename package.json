@@ -1,11 +1,15 @@
 {
   "name": "harborbuddy",
   "version": "1.0.0",
+	 "engines": {
+    "node": "10.15.3",
+		 "npm": "6.13.0"
+  }
   "description": "like yelp for harbors",
   "main": "app.js",
   "scripts": {
     "test": "test",
-	  "start": "node app.js"git 
+	  "start": "node app.js" 
   },
   "author": "jeronimo landauer",
   "license": "ISC",
