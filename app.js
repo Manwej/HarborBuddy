@@ -56,6 +56,6 @@ app.use(commentRoutes);
 
 
 
-app.listen(3000, process.env.IP, function(){
+app.listen(process.env.IP || 3000, function(){
 	console.log("HB has started");
 });
