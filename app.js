@@ -12,7 +12,7 @@ var User				=	require("./models/user.js");
 var flash				=	require("connect-flash");
 
 
-mongoose.connect("mongodb+srv://manwej:tomate@harborbuddy-f8rbx.mongodb.net/harbor_buddy?retryWrites=true&w=majority", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://.../harbor_buddy?retryWrites=true&w=majority", { useNewUrlParser: true });
 mongoose.set('useFindAndModify', false);
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"));
